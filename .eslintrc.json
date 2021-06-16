@@ -5,11 +5,13 @@
     },
     "extends": [
         "plugin:react/recommended",
-        "airbnb"
+        "airbnb",
+        "plugin:prettier/recommended"
     ],
     "plugins": [
         "react",
-        "react-hooks"
+        "react-hooks",
+        "prettier"
     ],
     "rules": {
         "react-hooks/rules-of-hooks": "error",
@@ -18,7 +20,6 @@
             1,
             {
                 "extensions": [
-                    ".tsx"
                 ]
             }
         ],
@@ -31,6 +32,9 @@
             }
         ],
         "no-use-before-define": "off",
-        "react/react-in-jsx-scope": "off"
+        "react/react-in-jsx-scope": "off",
+        "prettier/prettier": "error"
+        
+        
     }
 }

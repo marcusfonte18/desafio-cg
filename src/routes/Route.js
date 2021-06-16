@@ -8,7 +8,7 @@ export default function RouteWrraper({
     isPrivate,
     ...rest
 }) {
-    const signed = false;
+    const signed = true;
 
     if (!signed && isPrivate) {
         return <Redirect to='/' />;
@@ -24,7 +24,7 @@ export default function RouteWrraper({
 
 RouteWrraper.PropTypes = {
     isPrivate: PropTypes.bool,
-    component: PropTypes.oneOfType([propTypes.element, propTypes.func]).isRequired
+    component: PropTypes.oneOfType([PropTypes.element, PropTypes.func]).isRequired
 };
 
 RouteWrraper.defaultProps = {

@@ -19,7 +19,7 @@ export default function RouteWrraper({
     if (signed && !isPrivate) {
         return <Redirect to='/dashboard' />
     }
-    
+
     const Layout = signed ? DefaultLayout : AuthLayout;
 
     return <Route {...rest} render={props => (

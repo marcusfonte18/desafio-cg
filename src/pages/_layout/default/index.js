@@ -1,10 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {Wrraper} from './styles';
+import Header from '../../../components/Header';
 
-export default function DefaultLayout ({ children }) {
-    return <Wrraper>{children}</Wrraper>;
+import { Wrraper } from './styles';
+
+export default function DefaultLayout({ children }) {
+    return (
+        <Wrraper>
+            <Header>{children}</Header>
+        </Wrraper>);
 }
 
 DefaultLayout.propTypes = {

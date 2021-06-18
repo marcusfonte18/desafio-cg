@@ -2,7 +2,7 @@ import React from 'react';
 import { useHistory } from "react-router-dom";
 
 
-import { Container, Content, Profile } from './styles';
+import { Container, Content } from './styles';
 
 export default function Header() {
     const history = useHistory();
@@ -15,11 +15,9 @@ export default function Header() {
                 </nav>
 
                 <aside>
-                    <Profile>
-                        <span onClick={() => history.push("/register")}>Cadastro</span>
-                        <span onClick={() => history.push("/request")}>Consulta</span>
-                        <span onClick={() => history.push("/")}>Sair</span>
-                    </Profile>
+                    <span onClick={() => history.push("/register")}>Cadastro</span>
+                    <span onClick={() => history.push("/request")}>Consulta</span>
+                    <span onClick={() => history.push("/")}>Sair</span>
                 </aside>
             </Content>
         </Container >

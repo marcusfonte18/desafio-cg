@@ -4,11 +4,7 @@ import styled from "styled-components";
 export const Container = styled.div`
     background: #fff;
     padding: 0 30px;
-`; import React from 'react';
-
-export default function Dashboard() {
-    return <h1>dashboard</h1>;
-}
+`;
 
 export const Content = styled.div`
     height: 64px;
@@ -33,8 +29,4 @@ export const Content = styled.div`
     }
 
    
-`;
-
-export const Profile = styled.div`
-
 `;

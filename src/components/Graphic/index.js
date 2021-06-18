@@ -1,27 +1,49 @@
-import React, { useState } from 'react';
-import ApexCharts from 'apexcharts';
+import React, { useState, useEffect, useCallback } from 'react';
+import { Pie } from 'react-chartjs-2';
 
-export default function Graphic() {
-    const [series, setSeries] = useState([44, 55, 13, 43, 22]);
-    const [options, setOptions] = useState({
-        chart: {
-            width: 380,
-            type: 'pie',
+
+
+const data = {
+    labels: ['True', 'False'],
+    datasets: [
+        {
+            label: '# of Votes',
+            data: [12, 19],
+            backgroundColor: [
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+            ],
+            borderColor: [
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 159, 64, 1)',
+            ],
+            borderWidth: 1,
         },
-        labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
-        responsive: [{
-            breakpoint: 480,
-            options: {
-                chart: {
-                    width: 200
-                },
-                legend: {
-                    position: 'bottom'
-                }
-            }
-        }]
-    })
-
-
-
+    ],
 };
+
+const [comments, setComments] = useState(['']);
+
+const commentList = useCallback(async () => {
+    const response = await api.get('https://jsonplaceholder.typicode.com/posts')
+    setComments(response.data);
+}, []);
+
+useEffect(() => {
+    commentList();
+}, [comments]);
+
+
+const PieChart = () => (
+
+    <>
+        <div className='header'>
+            <span className='title'>Status de Pendências</span>
+            <div className='links'>
+            </div>
+        </div>
+        <Pie data={data} />
+    </>
+);
+
+export default PieChart;

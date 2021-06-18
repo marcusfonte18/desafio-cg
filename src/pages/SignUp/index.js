@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Form, Input } from '@rocketseat/unform'
 import * as Yup from 'yup';
 import AuthLayout from '../_layout/auth'
+import { toast } from 'react-toastify';
 
 import Header from '../../components/Header'
 import api from '../../services/api';
@@ -26,9 +27,9 @@ export default function SignUp() {
             });
 
         } catch {
-            console.log("Falha")
+            toast.log("Falha ao cadastrar usuário")
         };
-        alert('Usuário Cadastrado')
+        toast('Usuário Cadastrado')
         console.log(data)
     }
 

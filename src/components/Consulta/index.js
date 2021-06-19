@@ -9,8 +9,6 @@ export default function Consulta() {
     async function handleDelete(id) {
         console.log(id);
         await api.delete(`https://jsonplaceholder.typicode.com/posts/${id}`);
-        // const deleteList = comments.find(comment => id !== comment.id);
-        // setComments([deleteList]);
     }
 
     const commentList = useCallback(async () => {

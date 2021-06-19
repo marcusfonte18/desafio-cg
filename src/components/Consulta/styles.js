@@ -69,6 +69,7 @@ export const TableContainer = styled.section`
         padding-bottom: 5px;
         color: #7159c1;
       }
+      
 
     }
 

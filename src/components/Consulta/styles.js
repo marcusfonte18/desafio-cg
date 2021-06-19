@@ -2,23 +2,13 @@ import styled from 'styled-components';
 
 export const Wrraper = styled.div`
     height: 100%;
-<<<<<<< HEAD
-=======
-    background-size: cover;
->>>>>>> 69011b400d8e0e8ddca20be974df792ed34da17e
     background: linear-gradient(-90deg, #7159c1, #ab59c1);
 `;
 
 export const Container = styled.div`
-<<<<<<< HEAD
  background: linear-gradient(-90deg, #7159c1, #ab59c1);
   width: 100%;
   max-width: 1440px;
-=======
-background: linear-gradient(-90deg, #7159c1, #ab59c1);
-  width: 100%;
-  max-width: 1280px;
->>>>>>> 69011b400d8e0e8ddca20be974df792ed34da17e
   margin: 0 auto;
   padding: 40px 20px;
 `;
@@ -30,10 +20,6 @@ export const Title = styled.h1`
 `;
 
 export const CardContainer = styled.section`
-<<<<<<< HEAD
-=======
-
->>>>>>> 69011b400d8e0e8ddca20be974df792ed34da17e
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 32px;
@@ -41,19 +27,12 @@ export const CardContainer = styled.section`
 `;
 
 export const TableContainer = styled.section`
-<<<<<<< HEAD
   table { 
-=======
-  table {
->>>>>>> 69011b400d8e0e8ddca20be974df792ed34da17e
     width: 100%;
     border-spacing: 0 8px;
 
     th {
-<<<<<<< HEAD
         
-=======
->>>>>>> 69011b400d8e0e8ddca20be974df792ed34da17e
       color: #FFF;
       font-weight: normal;
       padding: 20px 32px;
@@ -64,10 +43,7 @@ export const TableContainer = styled.section`
     }
 
     td {
-<<<<<<< HEAD
         
-=======
->>>>>>> 69011b400d8e0e8ddca20be974df792ed34da17e
       padding: 20px 32px;
       border: 0;
       background: #fff;

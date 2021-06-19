@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+<h1 align=center >Desafio CG</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Capturar](https://user-images.githubusercontent.com/65238795/122621550-42299980-d06c-11eb-878f-e24831da0833.PNG)
 
-## Available Scripts
 
-In the project directory, you can run:
+## :rocket: Tecnologias
 
-### `yarn start`
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ - React
+ - JavaScript
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+ ## :page_with_curl: Projeto
 
-### `yarn test`
+ O projeto foi desenvolvido para um desafio, nele foi proposto:
+ 1. Criar um repositório para armazenar o projeto;
+ 2. Criar um arquivo README.md com instruções de execução do projeto;
+ 3. Criar arquivo .env com parâmetros de url;
+ 4. Criar autenticação do usuário;
+ 5. Criar CRUD de comentários;E
+ 6. Criar Menu de Navegabilidade para o CRUD;
+ 7. Na tela principal mostrar um gráfico de pizza com status de pendência. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**OBS: Os itens 3 e 7 estão pendentes.**
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ ## :computer: Para executar o projeto é necessário: 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Dar um Git Clone no repositório;
+- Abrir o repositório que você clonou no VsCode ou Editor que você utiliza;
+- Abrir o terminal e digitar yarn para baixar as dependências;
+- Após baixar as dependências, digitar yarn start no terminal para ele inicar o servidor local;
+- Apos o Projeto abrir no navegador, logar com um dos dois usuários: 
+- Usuário 1: E-mail: thiago@gmail.com.br / Senha: 12345678
+- Usuário 2: E-mail: roberto@gmail.com.br / Senha: teste
+- E pronto, pode ver o projeto :)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## :thinking: Como contribuir
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Faça um fork desse repositório;
+- Crie uma branch com a sua feature: git checkout -b minha-feature;
+- Faça commit das suas alterações: git commit -m 'feat: Minha nova feature';
+- Faça push para a sua branch: git push origin minha-feature.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
+#
+Feito com :hearts: by marcusfonte18 :wave:

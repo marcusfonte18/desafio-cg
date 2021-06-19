@@ -47,7 +47,7 @@ export default function Consulta() {
                                         <td className={'Body'}>{comment.body}</td>
                                         <td className="UserId">{comment.userId}</td>
                                         <td className="Action">
-                                            <button>Editar</button>
+                                            <buttonc>Editar</buttonc>
                                             <button onClick={() => handleDelete(comment.id)}>Excluir</button>
                                         </td>
                                     </tr>

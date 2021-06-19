@@ -2,14 +2,13 @@ import styled from 'styled-components';
 
 export const Wrraper = styled.div`
     height: 100%;
-    background-size: cover;
     background: linear-gradient(-90deg, #7159c1, #ab59c1);
 `;
 
 export const Container = styled.div`
-background: linear-gradient(-90deg, #7159c1, #ab59c1);
+ background: linear-gradient(-90deg, #7159c1, #ab59c1);
   width: 100%;
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 40px 20px;
 `;
@@ -21,7 +20,6 @@ export const Title = styled.h1`
 `;
 
 export const CardContainer = styled.section`
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 32px;
@@ -29,11 +27,12 @@ export const CardContainer = styled.section`
 `;
 
 export const TableContainer = styled.section`
-  table {
+  table { 
     width: 100%;
     border-spacing: 0 8px;
 
     th {
+        
       color: #FFF;
       font-weight: normal;
       padding: 20px 32px;
@@ -44,6 +43,7 @@ export const TableContainer = styled.section`
     }
 
     td {
+        
       padding: 20px 32px;
       border: 0;
       background: #fff;

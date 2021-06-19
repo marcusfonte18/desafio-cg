@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { useState, useEffect, useCallback } from 'react';
->>>>>>> 69011b400d8e0e8ddca20be974df792ed34da17e
 import { Pie } from 'react-chartjs-2';
 
 
@@ -26,20 +22,6 @@ const data = {
     ],
 };
 
-<<<<<<< HEAD
-=======
-const [comments, setComments] = useState(['']);
-
-const commentList = useCallback(async () => {
-    const response = await api.get('https://jsonplaceholder.typicode.com/posts')
-    setComments(response.data);
-}, []);
-
-useEffect(() => {
-    commentList();
-}, [comments]);
-
->>>>>>> 69011b400d8e0e8ddca20be974df792ed34da17e
 
 const PieChart = () => (
 

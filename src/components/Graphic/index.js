@@ -1,38 +1,84 @@
-import React from 'react';
-import { Pie } from 'react-chartjs-2';
+import React, { Component } from 'react';
+import { Pie } from "react-chartjs-2";
+import { Card, CardHeader, CardBody, CardTitle, Row, Col, } from "reactstrap";
+import Axios from "axios";
 
 
+export default class GraficoPizza extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            chart: []
+        };
+    }
 
-const data = {
-    labels: ['True', 'False'],
-    datasets: [
-        {
-            label: '# of Votes',
-            data: [12, 19],
-            backgroundColor: [
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-            ],
-            borderColor: [
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 159, 64, 1)',
-            ],
-            borderWidth: 1,
-        },
-    ],
-};
+    async componentDidMount() {
+        this.chartPie();
+    }
+
+    chartPie() {
+        Axios.get('https://jsonplaceholder.typicode.com/users/1/todos').then(res => {
+            const resp = res.data;
+            let labels = [];
+            let data = [];
+            resp.forEach(element => {
+                labels.push(element.completed);
+            });
+
+            this.setState({
+                chart: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: "Comentários",
+                            data: data
+                        }
+                    ]
+                }
+            });
+        });
+    }
 
 
-const PieChart = () => (
+    render() {
 
-    <>
-        <div className='header'>
-            <span className='title'>Status de Pendências</span>
-            <div className='links'>
-            </div>
-        </div>
-        <Pie data={data} />
-    </>
-);
+        return (
+            <>
 
-export default PieChart;
+                <Row>
+                    <Col xs="9">
+                        <Card className="card-chart">
+                            <CardHeader>
+                                <h5 className="card-category">Gráfico de comentrios</h5>
+                                <CardTitle tag="h3">
+                                    <i className="tim-icons icon-send text-success" /> Em pizza
+                                </CardTitle>
+                            </CardHeader>
+                            <CardBody>
+                                <div style={{ width: "90%", height: "100%", }}>
+                                    <Pie
+                                        // /* data={chartExamplePie.data} */
+                                        data={this.state.chart}
+                                        options={{
+                                            title: {
+                                                display: true,
+                                                text: '',
+                                                fontSize: 20
+                                            },
+                                            legend: {
+                                                display: true,
+                                                position: 'right'
+                                            }
+                                        }}
+                                    />
+                                </div>
+                            </CardBody>
+                        </Card>
+                    </Col>
+                </Row>
+
+
+            </>
+        );
+    }
+}

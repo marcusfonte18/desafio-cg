@@ -1,20 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import Header from '../../components/Header';
+import GraficoPizza from '../../components/Graphic';
 
-
-import { Wrraper, WrraperContainer } from './styles';
+import { Wrraper } from './styles';
 
 export default function DefaultLayout({ children }) {
     return (
         <Wrraper>
             <Header>{children}</Header>
-            <WrraperContainer>
-            </WrraperContainer>
+            <GraficoPizza />
         </Wrraper>
     );
 };
 
 DefaultLayout.propTypes = {
-    children: PropTypes.element.isRequired
+    children: PropTypes.element
 };

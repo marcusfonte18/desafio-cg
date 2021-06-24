@@ -3,7 +3,7 @@ import { Form, Input } from '@rocketseat/unform';
 import * as Yup from 'yup';
 import { useHistory } from "react-router-dom";
 import axios from 'axios';
-import AuthLayout from '../_layout/auth/'
+import AuthLayout from '../_layout/auth/';
 
 
 const schema = Yup.object().shape({

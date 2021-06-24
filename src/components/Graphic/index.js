@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Pie } from "react-chartjs-2";
-import { Card, CardHeader, CardBody, CardTitle, Row, Col, } from "reactstrap";
-import Axios from "axios";
+import axios from "axios";
 
 
 export default class GraficoPizza extends Component {
@@ -17,67 +16,78 @@ export default class GraficoPizza extends Component {
     }
 
     chartPie() {
-        Axios.get('https://jsonplaceholder.typicode.com/users/1/todos').then(res => {
+        axios.get('https://jsonplaceholder.typicode.com/users/1/todos').then(res => {
             const resp = res.data;
             let labels = [];
             let data = [];
             resp.forEach(element => {
-                labels.push(element.completed);
+                if (element.completed === true) {
+                    labels.push(element.completed)
+                } else {
+                    data.push(element.completed)
+                };
+
             });
 
             this.setState({
                 chart: {
-                    labels: labels,
+                    labels: ['True', 'False'],
                     datasets: [
                         {
-                            label: "Comentários",
-                            data: data
+                            data: [labels.length, data.length],
+                            backgroundColor: [
+                                'rgba(193, 89,193, 0.5)',
+                                'rgba(8, 75,164, 0.5)',
+
+                            ],
+                            hoverBackgroundColor: [
+                                'rgba(193, 89,193, 1)',
+                                'rgba(8, 75,164, 1)'
+                              ],
+                            borderWidth: 1,
                         }
-                    ]
-                }
+                    ],
+                },
             });
         });
     }
 
 
     render() {
+        const mainStyle = {
+            left: '325px',
+            top: '50px',
+            padding: "10px",
+            color: '#fff',
+            width: "50%",
+            height: "50%",
+            position: 'relative',
+        }
 
         return (
             <>
+                <div style={mainStyle}>
 
-                <Row>
-                    <Col xs="9">
-                        <Card className="card-chart">
-                            <CardHeader>
-                                <h5 className="card-category">Gráfico de comentrios</h5>
-                                <CardTitle tag="h3">
-                                    <i className="tim-icons icon-send text-success" /> Em pizza
-                                </CardTitle>
-                            </CardHeader>
-                            <CardBody>
-                                <div style={{ width: "90%", height: "100%", }}>
-                                    <Pie
-                                        // /* data={chartExamplePie.data} */
-                                        data={this.state.chart}
-                                        options={{
-                                            title: {
-                                                display: true,
-                                                text: '',
-                                                fontSize: 20
-                                            },
-                                            legend: {
-                                                display: true,
-                                                position: 'right'
-                                            }
-                                        }}
-                                    />
-                                </div>
-                            </CardBody>
-                        </Card>
-                    </Col>
-                </Row>
+                    <h3>Gráfico de comentários</h3>
+                    <h4>Em pizza</h4>
 
 
+                    <Pie
+                        // /* data={chartExamplePie.data} */
+                        data={this.state.chart}
+                        options={{
+                            title: {
+                                display: true,
+                                text: '',
+                                fontSize: 20,
+                            },
+                            legend: {
+                                display: true,
+                                position: 'right'
+                            }
+                        }}
+                    />
+                </div >
             </>
         );
     }

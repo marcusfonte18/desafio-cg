@@ -1,10 +1,10 @@
 import React from 'react';
-import { Form, Input } from '@rocketseat/unform'
+import { Form, Input } from '@rocketseat/unform';
 import * as Yup from 'yup';
-import AuthLayout from '../_layout/auth'
+import AuthLayout from '../_layout/auth';
 import { toast } from 'react-toastify';
 
-import Header from '../../components/Header'
+import Header from '../../components/Header';
 import api from '../../services/api';
 
 
@@ -27,7 +27,7 @@ export default function SignUp() {
             });
 
         } catch {
-            toast.log("Falha ao cadastrar usuário")
+            toast("Falha ao cadastrar usuário")
         };
         toast('Usuário Cadastrado')
         console.log(data)

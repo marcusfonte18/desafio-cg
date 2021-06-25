@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { Pie } from "react-chartjs-2";
 import axios from "axios";
+import { defaults } from 'react-chartjs-2';
 
 
+defaults.color = '#fff';
 export default class GraficoPizza extends Component {
     constructor(props) {
         super(props);
@@ -16,7 +18,7 @@ export default class GraficoPizza extends Component {
     }
 
     chartPie() {
-        axios.get('https://jsonplaceholder.typicode.com/users/1/todos').then(res => {
+        axios.get(`${process.env.REACT_APP_API_URL}/users/1/todos`).then(res => {
             const resp = res.data;
             let labels = [];
             let data = [];
@@ -79,11 +81,11 @@ export default class GraficoPizza extends Component {
                             title: {
                                 display: true,
                                 text: '',
-                                fontSize: 20,
+                                fontSize: 20
                             },
                             legend: {
                                 display: true,
-                                position: 'right'
+                                position: 'right',
                             }
                         }}
                     />

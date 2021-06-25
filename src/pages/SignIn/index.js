@@ -19,7 +19,6 @@ export default function SignIn() {
     const [signed, setSigned] = useState(false);
 
     useEffect(() => {
-        console.log("efect")
         if (signed) {
             history.push("/dashboard")
         }
@@ -28,15 +27,15 @@ export default function SignIn() {
 
     function handleSubmit(data) {
         try {
-            axios.get("https://bitbucket.org/thiagonobre/apirest/raw/eb4eee3039e972ccc636518f69bd5a1fd0a88d89/conta.json").then(response => {
+            axios.get(`${process.env.REACT_APP_API_AUTH}`).then(response => {
                 response.data.users.map(user => {
                     if (data.email === user.email || data.password === user.password) {
                         setSigned(true);
                     }
                 });
             });
-        } catch {
-            console.log("Falha")
+        } catch(err) {
+            console.log("Falha ao logar")
         };
 
     }

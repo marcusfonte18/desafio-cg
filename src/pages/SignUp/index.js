@@ -20,16 +20,18 @@ export default function SignUp() {
     async function handleSubmit(data) {
 
         try {
-            await api.post("https://jsonplaceholder.typicode.com/posts", {
+            await api.post(`${process.env.REACT_APP_API_URL}/posts`, {
                 title: data.title,
                 body: data.body,
                 userId: data.userId
+
             });
+            toast('Usuário Cadastrado')
 
         } catch {
             toast("Falha ao cadastrar usuário")
         };
-        toast('Usuário Cadastrado')
+
         console.log(data)
     }
 

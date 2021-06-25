@@ -8,11 +8,11 @@ export default function Consulta() {
 
     async function handleDelete(id) {
         console.log(id);
-        await api.delete(`https://jsonplaceholder.typicode.com/posts/${id}`);
+        await api.delete(`${process.env.REACT_APP_API_URL}/posts/${id}`);
     }
 
     const commentList = useCallback(async () => {
-        const response = await api.get('https://jsonplaceholder.typicode.com/posts')
+        const response = await api.get(`${process.env.REACT_APP_API_URL}/posts`)
         setComments(response.data);
     }, []);
 
@@ -23,7 +23,7 @@ export default function Consulta() {
     return (
         <>
             <Header />
-            <Wrraper>
+            <Wrraper >
                 <Container>
                     <TableContainer>
                         <table>
@@ -39,13 +39,13 @@ export default function Consulta() {
 
                             <tbody>
                                 {comments.map(comment => (
-                                    <tr>
-                                        <td className="Id">{comment.id}</td>
-                                        <td className="Title">{comment.title}</td>
-                                        <td className={'Body'}>{comment.body}</td>
-                                        <td className="UserId">{comment.userId}</td>
-                                        <td className="Action">
-                                            <buttonc>Editar</buttonc>
+                                    <tr >
+                                        <td >{comment.id}</td>
+                                        <td >{comment.title}</td>
+                                        <td >{comment.body}</td>
+                                        <td >{comment.userId}</td>
+                                        <td>
+                                            <button>Editar</button>
                                             <button onClick={() => handleDelete(comment.id)}>Excluir</button>
                                         </td>
                                     </tr>
@@ -53,7 +53,6 @@ export default function Consulta() {
                             </tbody>
                         </table>
                     </TableContainer>
-
                 </Container>
             </ Wrraper>
         </>

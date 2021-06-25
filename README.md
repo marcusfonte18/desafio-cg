@@ -17,20 +17,17 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
  2. Criar um arquivo README.md com instruções de execução do projeto;
  3. Criar arquivo .env com parâmetros de url;
  4. Criar autenticação do usuário;
- 5. Criar CRUD de comentários;E
+ 5. Criar CRUD de comentários;
  6. Criar Menu de Navegabilidade para o CRUD;
- 7. Na tela principal mostrar um gráfico de pizza com status de pendência. 
+ 7. Na tela principal mostrar um gráfico de pizza com status de pendência.
 
-**OBS: Os itens 3 e 7 estão pendentes.**
-
-
- ## :computer: Para executar o projeto é necessário: 
+ ## :computer: Para executar o projeto é necessário:
 
 - Dar um Git Clone no repositório;
 - Abrir o repositório que você clonou no VsCode ou Editor que você utiliza;
 - Abrir o terminal e digitar yarn para baixar as dependências;
 - Após baixar as dependências, digitar yarn start no terminal para ele inicar o servidor local;
-- Apos o Projeto abrir no navegador, logar com um dos dois usuários: 
+- Apos o Projeto abrir no navegador, logar com um dos dois usuários:
 - Usuário 1: E-mail: thiago@gmail.com.br / Senha: 12345678
 - Usuário 2: E-mail: roberto@gmail.com.br / Senha: teste
 - E pronto, pode ver o projeto :)
